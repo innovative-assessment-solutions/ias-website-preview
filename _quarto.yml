@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+  resources:
+    - assets/
+
+website:
+  title: "Innovative Assessment Solutions"
+  favicon: assets/images/cropped-favicon-05.png 
+  description: "Kansas's through-year assessment system, built by psychometricians in partnership with KSDE."
+
+  navbar:
+    logo: assets/images/IAS_Logo_Color.png
+    logo-alt: "Innovative Assessment Solutions"
+    logo-href: "index.qmd"
+    background: "#ffffff"
+    foreground: "#00102E"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Astra Assessments"
+        href: astra-assessments.qmd
+      - text: "2026–27 Cohort"
+        href: cohort.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "Contact"
+        href: contact.qmd
+
+  page-footer:
+    background: "#0a3555"
+    foreground: "white"
+    center: |
+      © 2026 Innovative Assessment Solutions, LLC
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: false
+    page-layout: full
+    title-block-style: none
+    grid:
+      body-width: 1200px
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
